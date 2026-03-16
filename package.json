@@ -9,6 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "ej1" : "node src/ej1.js",
-    "ej3" : "node src/ej3.js"
+    "ej3" : "node src/ej3.js",
+    "ej5" : "node src/ej5.js"
   }
 }
