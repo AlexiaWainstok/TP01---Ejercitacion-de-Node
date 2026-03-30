@@ -1,7 +1,7 @@
 import axios from "axios";
 const APIKEY = "ba4b8e59"; 
 
-const OMDBSearchByPage = async (searchText, page = 1) => { //Busca películas por texto (ej: "cars")y trae UNA página específica.
+const OMDBSearchByPage = async (searchText, page = 1) => { 
 let returnObject = {
 respuesta : false,
 cantidadTotal : 0,
@@ -25,7 +25,7 @@ return returnObject;
 };
 
 
-const OMDBSearchComplete = async (searchText) => { //Busca TODAS las películas (no solo una página)
+const OMDBSearchComplete = async (searchText) => { 
 let returnObject = {
 respuesta : false,
 cantidadTotal : 0,
@@ -57,7 +57,7 @@ return returnObject;
 };
 
 
-const OMDBGetByImdbID = async (imdbID) => { //Busca UNA película específica por su ID
+const OMDBGetByImdbID = async (imdbID) => { 
 let returnObject = {
 respuesta : false,
 cantidadTotal : 0,
