@@ -1,31 +1,25 @@
-import axios from "axios";
-const APIKEY = "ba4b8e59"; // Poné tu APIKEY, esta no funciona.
-const OMDBSearchByPage = async (searchText, page = 1) => {
-let returnObject = {
-respuesta : false,
-cantidadTotal : 0,
-datos : []
+import { 
+  OMDBSearchByPage,
+  OMDBSearchComplete,
+  OMDBGetByImdbID
+} from './modules/omdb-wrapper.js';
+
+
+const main = async () => {
+
+  let resultado;
+
+  resultado = await OMDBSearchByPage("cars", 1);
+  console.log("Por página:", resultado);
+
+  resultado = await OMDBSearchComplete("cars");
+  console.log("Completo:", resultado);
+
+  resultado = await OMDBGetByImdbID("tt0317219");
+  console.log("Por ID:", resultado);
+
 };
-// No seas vago, acá hay que hacer el cuerpo de la función!!!
-return returnObject;
-};
-const OMDBSearchComplete = async (searchText) => {
-let returnObject = {
-respuesta : false,
-cantidadTotal : 0,
-datos : []
-};
-// No seas vago, acá hay que hacer el cuerpo de la función!!!
-return returnObject;
-};
-const OMDBGetByImdbID = async (imdbID) => {
-let returnObject = {
-respuesta : false,
-cantidadTotal : 0,
-datos : {}
-};
-// No seas vago, acá hay que hacer el cuerpo de la función!!!
-return returnObject;
-};
-// Exporto todo lo que yo quiero exponer del módulo:
-export {OMDBSearchByPage, OMDBSearchComplete, OMDBGetByImdbID};
+
+main();
+
+
