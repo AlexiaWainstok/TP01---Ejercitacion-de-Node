@@ -18,6 +18,7 @@
     "ej8": "node src/ej8.js"
   },
   "dependencies": {
-    "axios": "^1.13.6"
+    "axios": "^1.13.6",
+    "currency-map-country": "^1.0.12"
   }
 }
